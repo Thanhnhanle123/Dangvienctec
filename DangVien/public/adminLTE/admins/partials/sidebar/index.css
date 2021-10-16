@@ -1,0 +1,35 @@
+.phutro-li{
+  margin-left: 0.5rem;
+}
+
+.brand-link{
+  text-align: center;
+}
+
+.brand-text{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.brand-text-dangVien{
+  color: rgb(231, 76, 20);
+  font-weight: 400;
+}
+
+#avt_show{
+  position: relative;
+  top: -2rem;
+  left: 1rem;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  margin-bottom: -5rem;
+  z-index: 0;
+  border: 2px solid;
+  border-radius: 12px;
+  opacity: 0;
+}
+
+
+
+

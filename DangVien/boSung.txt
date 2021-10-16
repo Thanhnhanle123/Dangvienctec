@@ -1,0 +1,46 @@
+<i class="fas fa-edit"></i>  --> edit
+<i class="fas fa-trash-alt"></i> --> Xoa
+
+I HEADER
+    thẻ "a" trang chủ cần gấn link trỏ đến trang chủ
+
+    thẻ "a" Liên hệ trỏ đến số trường cao đẳng KTKT cần thơ.
+
+    profile đổi hình lại, chỉnh sữa tên từng phần trong profile, chỉnh tiếng anh thanh tiếng việt
+
+II SIDEBAR
+
+    Đổi ảnh avatar
+    Bỏ phần search
+    Bổ sung phần đảng viên chuyển đổi
+    Chỉnh sữa lại các dữ liệu của các bảng khi tạo và update
+        nếu là mã thì phải IN HOA TẤT CẢ
+        còn nếu là tên hoặc khác thì phải in hoa chữ cái đầu tiên.
+        Thêm số thứ tự vào các bạn
+
+III FOOTER
+
+    Cập nhật lại copptright năm 2021
+    tên khoa công nghệ thông tin truyền thông.
+    Liên lạc
+
+@error('tenChucVu') is-invalid @enderror
+@error('tenChucVu')
+    <div class="alert alert-danger thongBao_required">{{ $message }}</div>
+@enderror
+strtoupper
+ucfirst
+
+try{
+    $this->thanhPho->find($id)->delete();
+    return response()->json([
+        'code' => 200,
+        'message' => 'success'
+    ],200);
+    }catch(\Exception $exception){
+    Log::error("message". $exception->getMessage(). " --- Line : ". $exception->getLine());
+    return response()->json([
+        'code' => 500,
+        'message' => 'fail'
+    ],500);
+}

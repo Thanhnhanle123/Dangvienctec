@@ -1,0 +1,23 @@
+.loc{
+  margin: 1rem;
+}
+
+.width_ten{
+  width: 10rem;
+}
+.chuyendi{
+  opacity: 1;
+}
+.icon_dangvienchuyendi{
+    opacity: 0;
+    border: 1px solid;
+    padding: 1rem;
+    padding-left: 4rem;
+    /* margin-right: 1rem; */
+    margin: -4.5rem;
+    cursor: pointer;
+}
+
+.icon_dangvienchuyendi:hover{
+  opacity: 1;
+}

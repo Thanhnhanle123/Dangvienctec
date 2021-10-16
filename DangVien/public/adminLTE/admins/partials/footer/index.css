@@ -1,0 +1,22 @@
+#back-to-top{
+  position: fixed;
+  bottom: 5rem;
+  right: 1.3rem;
+  z-index: 9999;
+  width: 1.5rem;
+  height: 1.8rem;
+  text-align: center;
+  line-height: 1.5rem;
+  opacity: .6;
+  color: #3440ee;
+  cursor: pointer;
+  border: 0;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease-out;
+  font-size: 28px;
+}
+
+#back-to-top:hover{
+  opacity: 1;
+}

@@ -1,0 +1,30 @@
+.header_bottom{
+  margin-bottom: 2rem;
+}
+.search{
+  margin-top: 0.3rem;
+}
+.microphone{
+  cursor: pointer;
+  position: relative;
+  right: 2.8rem;
+}
+
+.input_timKiem{
+  border-radius: 5px;
+}
+
+.btn_timKiem{
+  position: relative;
+  right: 2.8rem;
+  border: none;
+  background: none;
+}
+
+.err{
+  color: red;
+  font-style: italic;
+  font-style: unset;
+
+}
+
