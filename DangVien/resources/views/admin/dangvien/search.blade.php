@@ -140,10 +140,13 @@
                                 <th>Mã đảng viên</th>
                                 <th>Sữa</th>
                                 <th>Xóa</th>
+                                <th>Họ lót</th>
+                                <th>Tên</th>
                                 <th>Tên gọi khác</th>
                                 <th>Giới tính</th>
                                 <th>Ngày sinh</th>
                                 <th>Nơi sinh</th>
+                                <th>Tuổi</th>
                                 <th>Số CCCD</th>
                                 <th>Ngày cấp</th>
                                 <th>Nơi cấp</th>
@@ -168,8 +171,6 @@
                                 <th>Tin học</th>
                                 <th>Chức vụ</th>
                                 <th>Chi bộ</th>
-                                <th>Họ lót</th>
-                                <th>Tên</th>
                                 <th>Chuyển đến</th>
                                 <th>Chuyển đi</th>
                             </tr>
@@ -199,6 +200,16 @@
                                     <td>{{$tp->tenThanhPho}}</td>
                                     @endif
                                 @endforeach
+                                <td>
+                                    <?php
+                                        echo now()->year - date('Y',strtotime($dv->ngaySinh))." t <br>";
+                                        if(now()->month < date('m',strtotime($dv->ngaySinh))){
+                                            echo "thiếu ".(date('m',strtotime($dv->ngaySinh))-now()->month)." th";
+                                        }else {
+                                            echo (now()->month - date('m',strtotime($dv->ngaySinh)))." th";
+                                        }
+                                    ?>
+                                </td>
                                 @foreach ($cccd as $cccd_coppy)
                                     @if ($cccd_coppy->id == $dv->CCCD_id)
                                     <td>{{$cccd_coppy->CCCD}}</td>
@@ -292,10 +303,13 @@
                                 <th>Mã đảng viên</th>
                                 <th>Sữa</th>
                                 <th>Xóa</th>
+                                <th>Họ lót</th>
+                                <th>Tên</th>
                                 <th>Tên gọi khác</th>
                                 <th>Giới tính</th>
                                 <th>Ngày sinh</th>
                                 <th>Nơi sinh</th>
+                                <th>Tuổi</th>
                                 <th>Số CCCD</th>
                                 <th>Ngày cấp</th>
                                 <th>Nơi cấp</th>
@@ -320,8 +334,6 @@
                                 <th>Tin học</th>
                                 <th>Chức vụ</th>
                                 <th>Chi bộ</th>
-                                <th>Họ lót</th>
-                                <th>Tên</th>
                                 <th>Chuyển đến</th>
                                 <th>Chuyển đi</th>
                             </tr>

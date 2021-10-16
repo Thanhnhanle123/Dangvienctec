@@ -130,6 +130,7 @@
                                     <th>Giới tính</th>
                                     <th>Ngày sinh</th>
                                     <th>Nơi sinh</th>
+                                    <th>Tuổi</th>
                                     <th>Số CCCD</th>
                                     <th>Ngày cấp</th>
                                     <th>Nơi cấp</th>
@@ -181,6 +182,17 @@
                                         <td>{{$tp->tenThanhPho}}</td>
                                         @endif
                                     @endforeach
+                                    <td>
+                                        <?php
+                                                echo now()->year - date('Y',strtotime($dv->ngaySinh))." t <br>";
+                                                if(now()->month < date('m',strtotime($dv->ngaySinh))){
+                                                    echo "thiếu ".(date('m',strtotime($dv->ngaySinh))-now()->month)." th";
+                                                }else {
+                                                    echo (now()->month - date('m',strtotime($dv->ngaySinh)))." th";
+                                                }
+
+                                        ?>
+                                    </td>
                                     @foreach ($cccd as $cccd_coppy)
                                         @if ($cccd_coppy->id == $dv->CCCD_id)
                                         <td>{{$cccd_coppy->CCCD}}</td>
@@ -266,6 +278,7 @@
                                     <th>Giới tính</th>
                                     <th>Ngày sinh</th>
                                     <th>Nơi sinh</th>
+                                    <th>Tuổi</th>
                                     <th>Số CCCD</th>
                                     <th>Ngày cấp</th>
                                     <th>Nơi cấp</th>
